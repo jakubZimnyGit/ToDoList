@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<head>
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="inner_header"> 
+            <h1 class="title">
+                Edit ToDo
+            </h1>
+        </div>
+    </div>
+    <div class="container_edit">
+        <form action="{{ url_for('edit', index=index) }}", method="post">
+            <input class="todo_value_edit"type="text" name="todo" value="{{ todo['task'] }}">
+            <button class="button" type="submit">Save</button>
+        </form>
+    </div>

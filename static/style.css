@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;;
+}
+
+body{
+    background-image: url("background_pic.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header{
+    height: 80px;
+    width: 100%;
+    display:block;
+    background: rgba(242, 144, 255, 0);
+    background: linear-gradient(90deg, rgba(242, 144, 255, 0.5) 0%, rgba(255, 171, 244, 0.5) 46%, rgba(255, 125, 229, 0.5) 100%);
+}
+
+.inner_header{
+    width: 500px;
+    height: 100%;
+    display: block;
+    margin-left: 50px;
+}
+
+.title{
+    font-family: Comic Sans MS;
+    font-size: 48px;
+}
+
+.container{
+    justify-content: center;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+    border-top: 5px solid #d54cf7;
+    border-bottom: 5px solid #d54cf7;
+    backdrop-filter: blur(6px);
+    overflow: hidden;
+    padding: 10px 5px 10px 15px;
+}
+.todo {
+    display:flex;
+    justify-content: space-between;
+    padding: 20px 16px 5px 0px;
+}
+
+.todo_value{
+    background: transparent;
+    border:none;
+    outline:none;
+    font-family:Comic Sans MS;
+    font-size: 22px;
+    flex-grow: 1;
+}
+
+.todo:has(.todo_checkbox:checked){
+    color: #555555;
+    text-decoration: line-through;
+    order: 1;
+}
+
+.button {
+    background-color:#fee6e3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 10px 30px 10px 30px;
+    font-family:Comic Sans MS ;
+    font-size: 20px;
+}
+
+.todo_input{
+    width: 70%;
+    height: 35px;
+    opacity: .6;
+    border-radius: 15px;
+    border:none;
+    font-family:Comic Sans MS;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-left: 5px;
+}
+
+.todo_button{
+    background: transparent;
+    border:none;
+    outline:none;
+    font-family:Comic Sans MS;
+    font-size: 22px;
+    flex-grow: 1;
+    margin-right: 10px;
+    margin-bottom: 500px;
+}
+
+.todo_value_edit{
+    padding-left: 10px;
+    border:none;
+    outline:none;
+    font-family:Comic Sans MS;
+    font-size: 22px;
+    flex-grow: 1;
+    width: 650px;
+    height: 50px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+    background-color:  rgba(221, 207, 207, .65);
+    border-radius: 10px;
+}
+
+.container_edit{
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    width: 800px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+    border-top: 5px solid #d54cf7;
+    border-bottom: 5px solid #d54cf7;
+    backdrop-filter: blur(6px);
+    overflow: hidden;
+    padding: 10px 5px 10px 15px;
+}

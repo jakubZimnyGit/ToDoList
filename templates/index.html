@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="inner_header"> 
+            <h1 class="title">
+                ToDoList
+            </h1>
+        </div>
+    </div>
+    <div class="container">
+        <form action="{{ url_for('add') }}" method="post">
+            <input type="text" name="todo" class="todo_input", placeholder="Add New Task">
+            <button type="submit" class="button">Add Todo</button>
+        </form>
+        <form action="{{ url_for('submit') }}" method="post" >
+            <ul>
+                {% for todo in todos %}
+                    <div class="todo">
+                        <li class="todo_value">
+                            <input type="checkbox"  name="done" value="{{ loop.index0 }}" class="todo_checkbox" {% if todo['done'] %} checked {%endif %} >
+                            <span class="todo_value">{{ todo['task'] }}</span>
+                            
+                        </li>    
+                    </div>
+                    <a class="todo_button" href="{{ url_for('edit', index=loop.index0) }}"> Edit</a>
+                    <a class="todo_button" href="{{ url_for('delete', index=loop.index0) }}"> Delete</a>
+                {% endfor %}
+            </ul>
+            <br>
+            <button class="button" type="submit" name="btn" value="check">Save</button>
+            <button class="button" type="submit" name="btn" value="delete">Delete all checked</button>
+            
+        </form>
+    </div>
+    
+    
+</body>
+</html>
