@@ -32,13 +32,13 @@ To get the app up and running using Docker, follow these steps:
 2. Build the Docker image:
 
 ```bash
-    docker build -t jakubzimny/python-flask-todolist:0.0.1.RELEASE .
+    docker build -t image_name:tag .
 ```
 
 3. Run the container
 
 ```bash
-    docker run -p 3000:3000 jakubzimny/python-flask-todolist:0.0.1.RELEASE
+    docker run -p 3000:3000 image_name:tag .
 ```
 
 4. Open the app in your browser
