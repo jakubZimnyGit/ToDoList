@@ -34,6 +34,8 @@ To get the app up and running using Docker, follow these steps:
 ```bash
     docker build -t image_name:tag .
 ```
+- image_name is the name you want to give your image.
+- tag can be something like latest or any version number, such as 0.0.1.
 
 3. Run the container
 
